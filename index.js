@@ -17,8 +17,6 @@ app.post("/", (req, res) => {
 app.delete("/:id", (req, res) => {
     let {id} = req.params
     arr.splice(id, 1)
-    
-    
     res.send("data: ")
 })
 app.listen(8090, () => {
