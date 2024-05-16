@@ -14,11 +14,31 @@ app.post("/", (req, res) => {
     res.send("data: ")
 })
 
+
+
 app.delete("/:id", (req, res) => {
     let {id} = req.params
     arr.splice(id, 1)
-    res.send("data: ")
+    res.send("delete")
 })
-app.listen(8090, () => {
+
+app.patch("/:id", (req, res) =>{
+    let {id} = req.params
+
+    arr[id]={...arr,...req.body}
+
+    res.send("update")
+})
+
+app.put("/:id", (req, res) =>{
+    let {id} = req.params
+
+    arr[id]=req.body
+
+    res.send("update put")
+})
+
+
+app.listen(8000, () => {
     console.log("")
 })
