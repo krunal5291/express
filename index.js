@@ -8,11 +8,13 @@ app.get('/', (req, res) => {
     res.send(arr)
 })
 
+
+
 app.post("/", (req, res) => {
     console.log(req.body);
     arr.push(req.body)
     res.send("data: ")
-})
+})%20
 
 
 
@@ -39,6 +41,6 @@ app.put("/:id", (req, res) =>{
 })
 
 
-app.listen(8000, () => {
+app.listen(8090, () => {
     console.log("")
 })
