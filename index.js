@@ -14,7 +14,7 @@ app.post("/", (req, res) => {
     console.log(req.body);
     arr.push(req.body)
     res.send("data: ")
-})%20
+})
 
 
 
